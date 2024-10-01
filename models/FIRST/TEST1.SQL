@@ -1,4 +1,4 @@
-{{ config(materialized='table') }}
+{{ config(materialized='view') }}
 
 SELECT A.*,D.DNAME,D.LOC 
 FROM FIRST_DB.FIRST_SCH.EMP A
