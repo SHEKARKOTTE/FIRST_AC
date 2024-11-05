@@ -1,0 +1,3 @@
+SELECT * FROM DEV_DB.RAW.my_table A
+JOIN DEV_DB.RAW.my_contact B 
+ON A.ID = B.CUST_ID
