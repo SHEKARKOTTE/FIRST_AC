@@ -1,5 +1,6 @@
 {{ config(
-    materialized="view"
+    materialized="view",
+    schema='STAGING'
 ) }}
 SELECT A.*,B.CUST_ID,B.FIRST_NAME,B.LAST_NAME,B.PHONE_NUM,B.LOCATION,B.PINCODE FROM DEV_DB.RAW.my_table A
 JOIN DEV_DB.RAW.my_contact B 
