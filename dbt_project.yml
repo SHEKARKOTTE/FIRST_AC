@@ -43,3 +43,7 @@ models:
     # Applies to all files under models/example/
     #example:
       #+materialized: table
+    some_folder:
+          +schema: RAW
+    another_folder:
+          +schema: STAGING
