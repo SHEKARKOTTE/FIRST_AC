@@ -1,0 +1,9 @@
+{% macro refer(dataset,schema:STAGING) %}
+
+    {% if dataset =='*'  %}
+       {{ ref('{{tablename}}') }}
+    {% else %}
+       {{dataset}}.{{tablename}}
+    {% endif %}
+
+{% endmacro %}
