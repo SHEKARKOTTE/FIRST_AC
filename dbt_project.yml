@@ -8,7 +8,7 @@ version: '1.0.0'
 config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'my_profile'
+profile: 'default'
 
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
@@ -37,13 +37,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
- # STAGING:
-  # +schema: STAGING
-      some_folder:
-          +schema: RAW,
-      another_folder:
-          +schema: STAGING,
-          +materialized: view
+ my_project:
+    +schema: STAGING
+    +materialized: view
     # Applies to all files under models/example/
     #example:
       #+materialized: table
